@@ -1,13 +1,19 @@
 import React,{useEffect, useState} from 'react'
+import requests from '../requests';
+import axios from 'axios'
 
 function Main() {
-  const [movie,setMovie] = useState([])
+  const [movies,setMovies] = useState([])
 
 
 
   useEffect(()=>{
-    axios 
-  })
+    axios.get(requests.requestPopular).then(()=>{
+      setMovies(Response.data)
+
+    })
+  },[])
+  console.log(movies)
 
 
   return (
