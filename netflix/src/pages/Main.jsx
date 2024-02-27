@@ -1,6 +1,6 @@
-import React,{useEffect, useState} from 'react'
+import React,{useEffect, useState} from 'react';
 import requests from '../requests';
-import axios from 'axios'
+import axios from 'axios';
 
 function Main() {
   const [movies,setMovies] = useState([])
@@ -8,7 +8,7 @@ function Main() {
 
 
   useEffect(()=>{
-    axios.get(requests.requestPopular).then(()=>{
+    axios.get(requests.requestPopular).then((Response)=>{
       setMovies(Response.data)
 
     })
