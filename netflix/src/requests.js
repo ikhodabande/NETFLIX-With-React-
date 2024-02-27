@@ -7,4 +7,6 @@ const requests = {
   requestHorror : `https://api.themoviedb.org/3/account/21033253/search/movies?api_key=${key}&language=en-US&query=horror&page=1&sort_by=created_at.asc`,
   requestUpcoming : `https://api.themoviedb.org/3/account/21033253/upcoming/movies?api_key=${key}&language=en-US&page=1&sort_by=created_at.asc`,
   
-}
+};
+
+export default requests;
