@@ -2,12 +2,13 @@ import axios from 'axios'
 import React, { useEffect, useState } from 'react'
 import requests from '../requests';
 
-function Row() {
+function Row = (title, fetchURL) => {
  const [movies,setMovies] = useState([])
 
 
  useEffect(()=>{
-  axios.get(requests.requestPopular).then((response) => {
+  axios.get(fetchURL
+    ).then((response) => {
     setMovies(response.data.results);
   });
  },[]);
@@ -15,8 +16,11 @@ function Row() {
 
   return (
     <>
-    <div className='w-full h-[550] text-white'>
-      
+    <h2 className='text-white font-bold md:text-xl p-4'>{title}</h2>
+    <div className='relative flex items-center'>
+    <div id='slider'>
+    </div>
+
 
     </div>
 
