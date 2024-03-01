@@ -29,10 +29,10 @@ function Main() {
 
 
   return (
-    <div className='w-full h-[550px] text-white'>
+    <div className='w-full h-[550px]  text-white'>
       <div className='w-full h-full'>
-        <div className='absolute w-full h-full bg-gradient-to-r from-black'></div>
-        <img className='w-full h-full object-cover' src={`https://image.tmdb.org/t/p/original/${movie?.backdrop_path}`} alt={movie?.title} />
+        <div className='absolute w-full h-[550px] bg-gradient-to-r from-black'></div>
+        <img className='w-full h-full object-cover ' src={`https://image.tmdb.org/t/p/original/${movie?.backdrop_path}`} alt={movie?.title} />
         <div className='absolute w-full top-[20%] p-4 md:p-8'>
           <h1 className='text-3xl md:text-5xl font-bold '>
             {movie?.title}

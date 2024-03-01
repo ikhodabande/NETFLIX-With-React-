@@ -19,6 +19,7 @@ const Row = ({title, fetchURL}) => {
     <div className=''>
       <h2 className='text-white font-bold md:text-xl p-4'>{title}</h2>
     <div className='relative flex items-center'>
+
        <div id={'slider'}>
         {movies.map((item,id) => (
           <div className='w-[160] sm:w-[200] md:w-[240] lg:w-[280] inline-block cursor-pointer relative p-2'>
