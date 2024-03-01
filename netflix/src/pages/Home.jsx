@@ -9,7 +9,7 @@ function Home() {
   return (
     <>
     <Main/>
-    <Row title='Up Comming' fetchURL={requests.requestUpcoming}/>                
+    <Row title='UpComming' fetchURL={requests.requestUpcoming}/>                
     <Row title='Trending' fetchURL={requests.requestTrending}/>                
     <Row title='Popular' fetchURL={requests.requestPopular}/>                
     <Row title='Favorite' fetchURL={requests.requestFavorite}/>                
