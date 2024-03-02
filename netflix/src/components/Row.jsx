@@ -5,7 +5,7 @@ import {MdChevronLeft} from 'react-icons/md';
 
 
 
-const Row = ({title, fetchURL}) => {
+const Row = ({title, fetchURL, rowId}) => {
  const [movies,setMovies] = useState([])
  
 
@@ -21,12 +21,12 @@ const Row = ({title, fetchURL}) => {
 
 
  const slideLeft = () =>{
- var slider = document.getElementById("slider");
+ var slider = document.getElementById("slider" + rowId);
  slider.scrollLeft = slider.scrollLeft - 500;
  };
 
  const slideRight = () =>{
-  var slider = document.getElementById("slider");
+  var slider = document.getElementById("slider" + rowId);
   slider.scrollLeft = slider.scrollLeft + 500;
  };
 
@@ -39,7 +39,7 @@ const Row = ({title, fetchURL}) => {
       <MdChevronLeft 
       onClick={slideLeft}
       className='bg-white cursor-pointer rounded-full absolute left-0  opacity-50 hover:opacity-100 hidden group-hover:block z-10' size={40} />
-       <div id={'slider'} className='w-full h-full overflow-x-scroll whitespace-nowrap scrollbar-hide scroll-smooth relative '>
+       <div id={'slider' + rowId} className='w-full h-full overflow-x-scroll whitespace-nowrap scrollbar-hide scroll-smooth relative '>
         {movies.map((item,id) => (
           <Movie key={id} item={item}/>
         ))}

@@ -9,11 +9,11 @@ function Home() {
   return (
     <>
     <Main/>
-    <Row title='UpComming' fetchURL={requests.requestUpcoming}/>                
-    <Row title='Trending' fetchURL={requests.requestTrending}/>                
-    <Row title='Popular' fetchURL={requests.requestPopular}/>                
-    <Row title='Favorite' fetchURL={requests.requestFavorite}/>                
-    <Row title='Horror' fetchURL={requests.requestHorror}/>                
+    <Row rowId='1' title='UpComming' fetchURL={requests.requestUpcoming}/>                
+    <Row rowId='2' title='Trending' fetchURL={requests.requestTrending}/>                
+    <Row rowId='3' title='Popular' fetchURL={requests.requestPopular}/>                
+    <Row rowId='4' title='Favorite' fetchURL={requests.requestFavorite}/>                
+    <Row rowId='5' title='Horror' fetchURL={requests.requestHorror}/>                
     </>
   )
 }
