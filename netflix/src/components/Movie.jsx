@@ -1,12 +1,10 @@
 import React from 'react'
-import { useState } from 'react';
+import { useState } from 'react'
 import {FaHeart , FaRegHeart}  from 'react-icons/fa';
 
 
-function Movie(item) {
-  const [like,setLike] = useState([])
-
-
+function Movie({item}) {
+  const [like,setLike] = useState(false)
   return (
     <div className='w-[160] sm:w-[200] md:w-[240] lg:w-[280] inline-block cursor-pointer relative p-2'>
              <img className='w-auto h-auto block' src={`https://image.tmdb.org/t/p/w500/${item?.backdrop_path}`} alt={item?.title} />
